@@ -2,7 +2,7 @@ name: Continous delivery
 
 on:
   push:
-    branches: [ docker-image ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
