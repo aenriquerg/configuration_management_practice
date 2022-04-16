@@ -1,6 +1,3 @@
-from unittest import load_tests
-
-
 name: Pylint 
 
 on: [push]
