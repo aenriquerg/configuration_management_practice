@@ -15,5 +15,3 @@ jobs:
       uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag myapp:$(git rev-parse --short HEAD)
-    - name: Smoke Docker Test
-      run: docker run myapp:$(git rev-parse --short HEAD)
