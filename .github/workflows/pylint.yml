@@ -19,4 +19,4 @@ jobs:
         pip install -r requirements.txt
     - name: Static code analysis with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint myapp.py
