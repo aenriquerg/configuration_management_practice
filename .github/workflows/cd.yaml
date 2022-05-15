@@ -21,10 +21,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: maldicionchina/myapp
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: maldicionchina/myapp
         
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
