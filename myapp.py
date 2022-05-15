@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.get("/hi")
 def say_hi():
-    """Return a greeting for Alexis"""
+    """Return a greeting for Alexis Profe"""
     return 'Hola soy Alexis'
 
 if __name__=='__main__':
