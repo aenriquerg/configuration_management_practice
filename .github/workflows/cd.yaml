@@ -1,10 +1,10 @@
 name: Continous delivery
 
-on: [ push ]
-#  workflow_run:
-#    workflows: [ "Continous Integration" ]
-#    types: [ completed ]
-#    branches: [ master ]
+on:
+  workflow_run:
+    workflows: [ "Continous Integration" ]
+    types: [ completed ]
+    branches: [ master ]
 
 jobs:
   on-success:
