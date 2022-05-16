@@ -3,8 +3,8 @@ name: Continous delivery
 on:
   workflow_run:
     workflows: [ "Continous Integration" ]
-#    types: [ completed ]
-#    branches: [ master ]
+    types: [ completed ]
+    branches: [ master ]
 
 jobs:
   on-success:
