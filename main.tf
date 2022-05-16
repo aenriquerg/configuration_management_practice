@@ -14,8 +14,8 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0ff8a91507f77f867"
   instance_type = "t2.micro"
 
-  security_groups = [ aws_security_group.allow_ssh.name ]
-  key_name = "alexisrodgtz@gmail.com"
+  security_groups = [aws_security_group.allow_ssh.name]
+  key_name        = "alexisrodgtz@gmail.com"
 
   user_data = <<-EOF
     #!/bin/bash
@@ -27,7 +27,6 @@ resource "aws_instance" "app_server" {
     sudo docker pull nginx
     sudo docker run -d -p 80:8000 maldicionchina/myapp:master
   EOF
-  
   # https://github.com/hashicorp/terraform-provider-aws/issues/23315
   user_data_replace_on_change = true
 
