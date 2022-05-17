@@ -24,7 +24,6 @@ resource "aws_instance" "app_server" {
     sudo yum install docker -y
     sudo service docker start
     sudo usermod -a -G docker ec2-user
-    sudo docker pull nginx
     sudo docker run -d -p 80:8000 maldicionchina/myapp:master
   EOF
   # https://github.com/hashicorp/terraform-provider-aws/issues/23315
